@@ -8,13 +8,14 @@ export default async function GroupPage(){
     // DB내용을 전체 조회해서 객체 배열로 변수에 저장
     const db = (await connectDB).db('mydb');
     let activities = await db.collection('group').find().toArray();
+    console.log(activities);
+    await new Promise(resolve=>setTimeout(resolve, 1500))  // 1.5초 대기[로딩전시용]
 
     // 몽고DB의 _id를 문자열로 변경해서 컴포넌트끼리 전달
     activities = activities.map((item, index)=>({
         ...item,
         _id: item._id.toString()        // hexString에서 String으로 (props 전달을 위해)
     }))
-    console.log(activities);
 
     return(
         <div>

@@ -1,8 +1,9 @@
+import styles from './page.module.css';
 
 export default function SharePage(){
     return(
         <div>
-            게시글 올리기
+            
         </div>
     )
 }

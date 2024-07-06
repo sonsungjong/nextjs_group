@@ -10,6 +10,8 @@ export default async function GroupPostPage({params}){
     const db = (await connectDB).db('mydb');
     const activity = await db.collection('group').findOne({_id:ObjectId.createFromHexString(params.slug)});
     console.log(activity);
+    // 줄바꿈 문자열이 반영이 안되니깐 '<br/>' 로 대체한다
+    activity.content = activity.content.replace(/\n/g, '<br/>')
 
     return(
         <div>

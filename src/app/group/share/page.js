@@ -1,3 +1,4 @@
+import ImagePicker from '@/components/activities/image-picker';
 import styles from './page.module.css';
 
 // 프론트엔드에서 서버로 데이터를 전송할땐
@@ -35,7 +36,7 @@ export default function SharePage(){
                         <label htmlFor='content'>내용</label>
                         <textarea id='content' name='content' rows="10" required></textarea>
                     </p>
-                    이미지피커 컴포넌트
+                    <ImagePicker />
                     <p className={styles.actions}>
                         <button type='submit'>등록</button>
                     </p>

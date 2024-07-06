@@ -7,7 +7,7 @@ export default function ActivitiesItem({_id, title, slug, image, summary, conten
         <div className={styles.activities}>
             <header className={styles.imgHeader}>
                 <div className={styles.image}>
-                    <Image src={image} alt={title} width={350} height={200}/>
+                    <Image src={image} alt={title} fill/>
                 </div>
             </header>
             <div className={styles.headerText}>

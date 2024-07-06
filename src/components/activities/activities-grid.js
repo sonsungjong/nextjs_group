@@ -4,7 +4,7 @@ import ActivitiesItem from './activities-item';
 export default function ActivitiesGrid({activities}){
     return(
         <div>
-            <ul className=''>
+            <ul className={styles.activities}>
                 {
                     activities.map((item, index)=>{
                         return(
